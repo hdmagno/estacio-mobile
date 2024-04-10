@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
+  ActivityIndicator,
   Alert,
   FlatList,
   StyleSheet,
@@ -20,9 +21,10 @@ const ProductList = ({ navigation }) => {
   const [productValue, setProductValue] = useState("");
   const [productQuantity, setProductQuantity] = useState("");
   let [editState, setEditState] = useState("none");
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchProducts();
+  useEffect(() => {    
+    fetchProducts();    
   }, []);
 
   const fetchProducts = () => {
@@ -35,6 +37,7 @@ const ProductList = ({ navigation }) => {
           id: doc.id,
         }));
         setProducts(list);
+        setLoading(false);
       });
   }
 
@@ -169,6 +172,11 @@ const ProductList = ({ navigation }) => {
         <Text style={styles.title}>Lista de produtos</Text>
       </View>
       <FlatList
+        ListEmptyComponent={
+          loading 
+            ? <ActivityIndicator size="large" color="#0000ff" /> 
+            : <Text>Sem registros</Text>
+          }
         data={products}
         renderItem={renderProducts}
         keyExtractor={(item) => item.id.toString()}
@@ -180,7 +188,7 @@ const ProductList = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
+    // flex: 1,
     justifyContent: "center",
     alignItems: "flex-start",
     paddingVertical: 20,
@@ -212,7 +220,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderWidth: 1,
     borderColor: "#000",
-    width: "99%"
+    width: "96%"
   },
   label: {
     flexDirection: "column",

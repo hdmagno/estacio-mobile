@@ -17,6 +17,7 @@ const Login = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>Controle de estoque</Text>
       <Image style={styles.image} source={require("../../../assets/gestão-de-estoque.png")} />
       <TextInput
         style={styles.input}
@@ -41,12 +42,18 @@ const Login = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 80,
+    marginTop: 50,
     alignItems: "center",
   },
+  title: {
+    fontSize: 32,
+    fontWeight: '700',
+    marginBottom: 20
+  },
   image: {
-    width: "80%",
+    width: "90%",
     height: 100,
+    marginLeft: 20
   },
   input: {
     width: "80%",
