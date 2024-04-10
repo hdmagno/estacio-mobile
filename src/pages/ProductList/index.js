@@ -12,7 +12,7 @@ import {
 
 import firebase from "../../config/firebase.config";
 
-const ProductList = ({ navigation }) => {
+const ProductList = () => {
   // const navigation = useNavigation();
   const [products, setProducts] = useState([]);
   const [productId, setProductId] = useState("");
