@@ -20,7 +20,7 @@ export default function App() {
           name="ProductList"
           component={ProductList}
           options={({ navigation }) => ({
-            title: "",
+            title: "Sair",
             headerRight: () => (
               <TouchableOpacity
                 style={styles.addButton}
@@ -34,7 +34,7 @@ export default function App() {
         <Stack.Screen
           name="ProductCreate"
           component={ProductCreate}
-          options={{ title: "" }}
+          options={{ title: "Voltar" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

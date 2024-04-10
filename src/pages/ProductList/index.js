@@ -124,8 +124,8 @@ const ProductList = () => {
             />
           </View>
           <View style={styles.editButtons}>
-            <TouchableOpacity style={styles.editButton} onPress={closeEdit}>
-              <Text style={styles.editButtonText}>Voltar</Text>
+            <TouchableOpacity style={styles.cancelButton} onPress={closeEdit}>
+              <Text style={styles.editButtonText}>Cancelar</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.editButton}
@@ -290,6 +290,15 @@ const styles = StyleSheet.create({
   },
   editButton: {
     backgroundColor: "#007AFF",
+    justifyContent: "center",
+    borderRadius: 5,
+    alignItems: "center",
+    width: "35%",
+    paddingVertical: 5
+    // aspectRatio: 2.1,
+  },
+  cancelButton: {
+    backgroundColor: "gray",
     justifyContent: "center",
     borderRadius: 5,
     alignItems: "center",
