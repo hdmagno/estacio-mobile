@@ -188,11 +188,11 @@ const ProductList = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
+    flex: 1,
     justifyContent: "center",
-    alignItems: "flex-start",
+    // alignItems: "flex-start",
     paddingVertical: 20,
-    paddingHorizontal: 5
+    paddingHorizontal: 5,
   },
   titleContainer: {
     justifyContent: "flex-start",
@@ -213,14 +213,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 20,
     marginVertical: 8,
-    marginHorizontal: 1,
+    marginLeft: "auto",
+    marginRight: "auto",
     borderRadius: 5,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     borderWidth: 1,
     borderColor: "#000",
-    width: "96%"
+    width: "100%"
   },
   label: {
     flexDirection: "column",
