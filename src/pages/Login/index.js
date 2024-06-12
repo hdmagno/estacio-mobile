@@ -6,7 +6,7 @@ const Login = ({ navigation }) => {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    if (username === "admin" && password === "1234") {
+    if (username === "Admin" && password === "1234") {
       setUsername("");
       setPassword("");
       navigation.navigate("ProductList");
